@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn tienda_ropa.wsgi
+web: python manage.py migrate --noinput && gunicorn tienda_ropa.wsgi
