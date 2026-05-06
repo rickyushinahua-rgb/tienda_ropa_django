@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<div class="p-5 mb-4 bg-white rounded-4 shadow-sm text-center">
+    <h1 class="display-5 fw-bold">Sistema CRUD - Tienda de Ropa</h1>
+
+    <p class="lead mt-3">
+        Aplicación desarrollada con Django y MySQL para gestionar categorías y prendas con imágenes.
+    </p>
+
+    <div class="mt-4">
+        <a href="{% url 'listar_categorias' %}" class="btn btn-primary btn-lg me-2">
+            Gestionar Categorías
+        </a>
+
+        <a href="{% url 'listar_prendas' %}" class="btn btn-success btn-lg">
+            Gestionar Prendas
+        </a>
+    </div>
+</div>
+
+<div class="row text-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h4 class="card-title">Categorías</h4>
+                <p class="card-text">
+                    Permite registrar, listar, editar y eliminar categorías de ropa.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h4 class="card-title">Prendas</h4>
+                <p class="card-text">
+                    Permite gestionar prendas con talla, color, precio, imagen y categoría.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
